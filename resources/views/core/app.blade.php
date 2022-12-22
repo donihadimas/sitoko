@@ -49,6 +49,10 @@
     <!-- Helpers -->
     <script src="{{ asset('vendor/js/helpers.js') }}"></script>
 
+    {{-- datatables --}}
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs5/jq-3.6.0/dt-1.13.1/af-2.5.1/b-2.3.3/fh-3.3.1/sc-2.0.7/datatables.min.css"/>
+
+
     <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
     <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
     <script src="{{ asset('js/config.js') }}"></script>
@@ -111,6 +115,9 @@
 
     <!-- Place this tag in your head or just before your close body tag. -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+    {{-- Data Tables --}}
+    <script type="text/javascript" src="https://cdn.datatables.net/v/bs5/jq-3.6.0/dt-1.13.1/af-2.5.1/b-2.3.3/fh-3.3.1/sc-2.0.7/datatables.min.js"></script>
 
     {{-- push Script --}}
     @stack('scripts')
