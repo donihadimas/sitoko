@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ClientMasterDataProduct;
 use App\Http\Controllers\DashboardControlller;
 use Illuminate\Support\Facades\Route;
 
@@ -18,3 +19,6 @@ Route::redirect('/', '/dashboard');
 
 // Home Page
 Route::get('/dashboard', [DashboardControlller::class, 'index']);
+Route::prefix('master-data')->group(function () {
+    Route::get('/product', [ClientMasterDataProduct::class, 'index']);
+});

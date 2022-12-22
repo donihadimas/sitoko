@@ -68,7 +68,7 @@
 
     <ul class="menu-inner py-1">
       <!-- Dashboard -->
-      <li class="menu-item active">
+      <li class="menu-item @yield('dashboard')">
         <a href="index.html" class="menu-link">
           <i class="menu-icon tf-icons bx bx-home-circle"></i>
           <div data-i18n="Analytics">Dashboard</div>
@@ -91,8 +91,8 @@
               <div data-i18n="Account">Transaksi Penjualan</div>
             </a>
           </li>
-          <li class="menu-item">
-            <a href="pages-account-settings-notifications.html" class="menu-link">
+          <li class="menu-item @yield('data-penjualan')">
+            <a href="" class="menu-link">
               <div data-i18n="Notifications">Data Penjualan</div>
             </a>
           </li>
@@ -130,8 +130,8 @@
       <!-- Master Data -->
       <li class="menu-header small text-uppercase"><span class="menu-header-text">Master Data</span></li>
       <!-- Produk -->
-      <li class="menu-item">
-        <a href="cards-basic.html" class="menu-link">
+      <li class="menu-item @yield('product')">
+        <a href="{{ url('master-data/product') }}" class="menu-link">
           <i class="menu-icon tf-icons bx bx-collection"></i>
           <div data-i18n="Basic">Produk</div>
         </a>
