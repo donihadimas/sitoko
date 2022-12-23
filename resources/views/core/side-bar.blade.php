@@ -64,6 +64,7 @@
       </a>
     </div>
 
+
     <div class="menu-inner-shadow"></div>
 
     <ul class="menu-inner py-1">
@@ -137,10 +138,17 @@
         </a>
       </li>
       <!-- Kategori Produk -->
-      <li class="menu-item">
-        <a href="javascript:void(0)" class="menu-link">
+      <li class="menu-item @yield('product-category')">
+        <a href="{{ url('master-data/product-category') }}" class="menu-link">
           <i class="menu-icon tf-icons bx bx-box"></i>
           <div data-i18n="User interface">Kategori Produk</div>
+        </a>
+      </li>
+      <!-- Merek -->
+      <li class="menu-item">
+        <a href="cards-basic.html" class="menu-link">
+          <i class="menu-icon tf-icons bx bx-collection"></i>
+          <div data-i18n="Basic">Merek Produk</div>
         </a>
       </li>
       <!-- Supplier -->
