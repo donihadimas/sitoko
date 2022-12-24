@@ -311,8 +311,9 @@
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
-                                    Tutup
+                                    Batal
                                 </button>
+                                <button type="button" class="btn btn-primary">Simpan</button>
                             </div>
                         </div>
                     </div>
