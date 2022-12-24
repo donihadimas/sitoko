@@ -1,7 +1,7 @@
 @extends('core.app')
 @section('title', 'Master Data')
-@section('title2', 'Produk')
-@section('product', 'active')
+@section('title2', 'User')
+@section('user', 'active')
 @push('style')
     <!-- CSS Libraries -->
 @endpush
@@ -15,7 +15,7 @@
                         <li class="breadcrumb-item">
                             <a href="javascript:void(0);">Master Data</a>
                         </li>
-                        <li class="breadcrumb-item active">Produk</li>
+                        <li class="breadcrumb-item active">User</li>
                     </ol>
                 </nav>
             {{-- /Breadcrumb --}}
@@ -30,13 +30,13 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="card mb-4">
-                            <h4 class="card-header">Daftar Produk</h4>
+                            <h4 class="card-header">Daftar User</h4>
                             <!-- Account -->
                             <div class="card-body">
                                 <div class="d-flex justify-content-end align-items-end align-items-sm-center gap-4">
                                     <div class="button-wrapper">
                                         <button type="button" class="btn rounded-pill btn-outline-primary" data-bs-toggle="modal" data-bs-target="#addModal">
-                                            Tambah Produk<i class="bx bx-plus-circle ms-1"></i>
+                                            Tambah User<i class="bx bx-plus-circle ms-1"></i>
                                         </button>
                                     </div>
                                 </div>
@@ -46,17 +46,15 @@
                                 <table class="table table-striped w-100" id="dtindex_produk">
                                     <thead>
                                         <th style="width: 5%">No</th>
-                                        <th>Kode Produk</th>
-                                        <th>Kategori</th>
-                                        <th>Stok</th>
-                                        <th>Terjual</th>
+                                        <th>ID User</th>
+                                        <th>Nama User</th>
+                                        <th>Jabatan</th>
                                         <th>Aksi</th>
                                     </thead>
                                     <tbody>
                                         @for ($i = 1; $i <= 10; $i++)
                                             <tr>
                                                 <td>{{ $i }}</td>
-                                                <td>Dummy</td>
                                                 <td>Dummy</td>
                                                 <td>Dummy</td>
                                                 <td>Dummy</td>
@@ -91,66 +89,41 @@
                     <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel3">Tambah Produk</h5>
+                            <h5 class="modal-title" id="exampleModalLabel3">Tambah User</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" ></button>
                             </div>
                             <div class="modal-body">
                                 <div class="row">
                                     <div class="col mb-3">
                                         <div class="form-floating">
-                                            <input type="text" class="form-control" id="floatingInput" placeholder="Masukan nama produk" aria-describedby="floatingInputHelp" />
-                                            <label for="floatingInput">Nama Produk</label>
+                                            <input type="text" class="form-control" id="floatingInput" placeholder="Masukan nama user" aria-describedby="floatingInputHelp" />
+                                            <label for="floatingInput">Nama User</label>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="row g-2">
-                                    <div class="col-md-6">
-                                        <label for="defaultSelect" class="form-label">Kategori Produk</label>
+                                    <div class="col-md-12">
+                                        <label for="defaultSelect" class="form-label">Jabatan</label>
                                         <select id="defaultSelect" class="form-select">
-                                            <option value="">Pilih Kategori Produk</option>
-                                            <option value="1">One</option>
-                                            <option value="2">Two</option>
-                                            <option value="3">Three</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label for="defaultSelect" class="form-label">Merek Produk</label>
-                                        <select id="defaultSelect" class="form-select">
-                                            <option value="">Pilih Merek Produk</option>
-                                            <option value="1">One</option>
-                                            <option value="2">Two</option>
-                                            <option value="3">Three</option>
+                                            <option value="">Pilih Jabatan</option>
+                                            <option value="1">Administrator</option>
+                                            <option value="2">Kasir</option>
                                         </select>
                                     </div>
                                 </div>
                                 <div class="row g-2">
-                                    <div class="col-md-6 my-3">
-                                        <label for="" class="form-label">Harga Beli</label>
+                                    <div class="col my-3">
+                                        <label for="" class="form-label">Telepon User</label>
                                         <div class="input-group input-group-merge">
-                                            <span class="input-group-text">Rp.</span>
-                                            <input type="text" class="form-control" placeholder="1.000.000" aria-label="Amount (to the nearest rupiah)" />
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 my-3">
-                                        <label for="" class="form-label">Harga Jual</label>
-                                        <div class="input-group input-group-merge">
-                                            <span class="input-group-text">Rp.</span>
-                                            <input type="text" class="form-control" placeholder="1.000.000" aria-label="Amount (to the nearest rupiah)" />
+                                            <span class="input-group-text">+62</span>
+                                            <input type="text" class="form-control" placeholder="822-9531-1234" aria-label="Amount (to the nearest rupiah)" />
                                         </div>
                                     </div>
                                 </div>
                                 <div class="row g-2">
                                     <div class="col my-3">
-                                        <div class="form-floating">
-                                            <input type="text" class="form-control" id="floatingInput" placeholder="100" aria-describedby="floatingInputHelp" />
-                                            <label for="floatingInput">Stok Produk</label>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row g-2">
-                                    <div class="col mb-0">
-                                        <label for="formFile" class="form-label">Upload Foto Produk</label>
-                                        <input class="form-control" type="file" id="formFile" />
+                                        <label for="exampleFormControlTextarea1" class="form-label">Alamat Supplier</label>
+                                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                                     </div>
                                 </div>
                             </div>
@@ -169,143 +142,41 @@
                     <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel3">Detail Produk</h5>
+                            <h5 class="modal-title" id="exampleModalLabel3">Detail User</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" ></button>
                             </div>
                             <div class="modal-body">
                                 <div class="row">
                                     <div class="col mb-3">
                                         <div class="form-floating">
-                                            <input type="text" class="form-control" id="floatingInput" placeholder="Masukan nama produk" aria-describedby="floatingInputHelp" disabled/>
-                                            <label for="floatingInput">Nama Produk</label>
+                                            <input type="text" class="form-control" id="floatingInput" placeholder="Masukan nama user" aria-describedby="floatingInputHelp" disabled/>
+                                            <label for="floatingInput">Nama User</label>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="row g-2">
-                                    <div class="col-md-6">
-                                        <label for="defaultSelect" class="form-label">Kategori Produk</label>
+                                    <div class="col-md-12">
+                                        <label for="defaultSelect" class="form-label">Jabatan</label>
                                         <select id="defaultSelect" class="form-select" disabled>
-                                            <option value="">Pilih Kategori Produk</option>
-                                            <option value="1">One</option>
-                                            <option value="2">Two</option>
-                                            <option value="3">Three</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label for="defaultSelect" class="form-label">Merek Produk</label>
-                                        <select id="defaultSelect" class="form-select" disabled>
-                                            <option value="">Pilih Merek Produk</option>
-                                            <option value="1">One</option>
-                                            <option value="2">Two</option>
-                                            <option value="3">Three</option>
+                                            <option value="">Pilih Jabatan</option>
+                                            <option value="1">Administrator</option>
+                                            <option value="2">Kasir</option>
                                         </select>
                                     </div>
                                 </div>
                                 <div class="row g-2">
-                                    <div class="col-md-6 my-3">
-                                        <label for="" class="form-label">Harga Beli</label>
+                                    <div class="col my-3">
+                                        <label for="" class="form-label">Telepon User</label>
                                         <div class="input-group input-group-merge">
-                                            <span class="input-group-text">Rp.</span>
-                                            <input type="text" class="form-control" placeholder="1.000.000" aria-label="Amount (to the nearest rupiah)" disabled/>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 my-3">
-                                        <label for="" class="form-label">Harga Jual</label>
-                                        <div class="input-group input-group-merge">
-                                            <span class="input-group-text">Rp.</span>
-                                            <input type="text" class="form-control" placeholder="1.000.000" aria-label="Amount (to the nearest rupiah)" disabled/>
+                                            <span class="input-group-text">+62</span>
+                                            <input type="text" class="form-control" placeholder="822-9531-1234" aria-label="Amount (to the nearest rupiah)" disabled/>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="row g-2">
                                     <div class="col my-3">
-                                        <div class="form-floating">
-                                            <input type="text" class="form-control" id="floatingInput" placeholder="100" aria-describedby="floatingInputHelp" disabled/>
-                                            <label for="floatingInput">Stok Produk</label>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row g-2">
-                                    <div class="col mb-0">
-                                        <label for="formFile" class="form-label">Upload Foto Produk</label>
-                                        <input class="form-control" type="file" id="formFile" disabled/>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
-                                    Tutup
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            {{-- /detailModal --}}
-            {{-- editModal --}}
-                <div class="modal fade" id="editModal" tabindex="-1" aria-hidden="true">
-                    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel3">Ubah Produk</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" ></button>
-                            </div>
-                            <div class="modal-body">
-                                <div class="row">
-                                    <div class="col mb-3">
-                                        <div class="form-floating">
-                                            <input type="text" class="form-control" id="floatingInput" placeholder="Masukan nama produk" aria-describedby="floatingInputHelp"/>
-                                            <label for="floatingInput">Nama Produk</label>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row g-2">
-                                    <div class="col-md-6">
-                                        <label for="defaultSelect" class="form-label">Kategori Produk</label>
-                                        <select id="defaultSelect" class="form-select">
-                                            <option value="">Pilih Kategori Produk</option>
-                                            <option value="1">One</option>
-                                            <option value="2">Two</option>
-                                            <option value="3">Three</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label for="defaultSelect" class="form-label">Merek Produk</label>
-                                        <select id="defaultSelect" class="form-select">
-                                            <option value="">Pilih Merek Produk</option>
-                                            <option value="1">One</option>
-                                            <option value="2">Two</option>
-                                            <option value="3">Three</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="row g-2">
-                                    <div class="col-md-6 my-3">
-                                        <label for="" class="form-label">Harga Beli</label>
-                                        <div class="input-group input-group-merge">
-                                            <span class="input-group-text">Rp.</span>
-                                            <input type="text" class="form-control" placeholder="1.000.000" aria-label="Amount (to the nearest rupiah)"/>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 my-3">
-                                        <label for="" class="form-label">Harga Jual</label>
-                                        <div class="input-group input-group-merge">
-                                            <span class="input-group-text">Rp.</span>
-                                            <input type="text" class="form-control" placeholder="1.000.000" aria-label="Amount (to the nearest rupiah)"/>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row g-2">
-                                    <div class="col my-3">
-                                        <div class="form-floating">
-                                            <input type="text" class="form-control" id="floatingInput" placeholder="100" aria-describedby="floatingInputHelp"/>
-                                            <label for="floatingInput">Stok Produk</label>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row g-2">
-                                    <div class="col mb-0">
-                                        <label for="formFile" class="form-label">Upload Foto Produk</label>
-                                        <input class="form-control" type="file" id="formFile"/>
+                                        <label for="exampleFormControlTextarea1" class="form-label">Alamat Supplier</label>
+                                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" disabled></textarea>
                                     </div>
                                 </div>
                             </div>
@@ -318,13 +189,65 @@
                         </div>
                     </div>
                 </div>
+            {{-- /detailModal --}}
+            {{-- editModal --}}
+                <div class="modal fade" id="editModal" tabindex="-1" aria-hidden="true">
+                    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel3">Ubah User</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" ></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row">
+                                    <div class="col mb-3">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" id="floatingInput" placeholder="Masukan nama user" aria-describedby="floatingInputHelp" />
+                                            <label for="floatingInput">Nama User</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row g-2">
+                                    <div class="col-md-12">
+                                        <label for="defaultSelect" class="form-label">Jabatan</label>
+                                        <select id="defaultSelect" class="form-select">
+                                            <option value="">Pilih Jabatan</option>
+                                            <option value="1">Administrator</option>
+                                            <option value="2">Kasir</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row g-2">
+                                    <div class="col my-3">
+                                        <label for="" class="form-label">Telepon User</label>
+                                        <div class="input-group input-group-merge">
+                                            <span class="input-group-text">+62</span>
+                                            <input type="text" class="form-control" placeholder="822-9531-1234" aria-label="Amount (to the nearest rupiah)" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row g-2">
+                                    <div class="col my-3">
+                                        <label for="exampleFormControlTextarea1" class="form-label">Alamat Supplier</label>
+                                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
+                                    Tutup
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             {{-- /editModal --}}
             {{-- deleteModal --}}
                 <div class="modal fade" id="deleteModal" tabindex="-1" aria-hidden="true">
                     <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel3">Hapus Produk</h5>
+                            <h5 class="modal-title" id="exampleModalLabel3">Hapus User</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" ></button>
                             </div>
                             <div class="modal-body">
