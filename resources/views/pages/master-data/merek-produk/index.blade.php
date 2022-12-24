@@ -117,7 +117,7 @@
                     <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel3">Ubah Kategori Produk</h5>
+                            <h5 class="modal-title" id="exampleModalLabel3">Ubah Merek Produk</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" ></button>
                             </div>
                             <div class="modal-body">
@@ -125,14 +125,8 @@
                                     <div class="col mb-3">
                                         <div class="form-floating">
                                             <input type="text" class="form-control" id="floatingInput" placeholder="Masukan nama kategori" aria-describedby="floatingInputHelp" />
-                                            <label for="floatingInput">Nama Kategori Produk</label>
+                                            <label for="floatingInput">Merek Produk</label>
                                         </div>
-                                    </div>
-                                </div>
-                                <div class="row g-2">
-                                    <div class="col mb-0">
-                                        <label for="formFile" class="form-label">Upload Foto Kategori</label>
-                                        <input class="form-control" type="file" id="formFile" />
                                     </div>
                                 </div>
                             </div>
@@ -151,7 +145,7 @@
                     <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel3">Detail Kategori Produk</h5>
+                            <h5 class="modal-title" id="exampleModalLabel3">Detail Merek Produk</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" ></button>
                             </div>
                             <div class="modal-body">
@@ -159,14 +153,8 @@
                                     <div class="col mb-3">
                                         <div class="form-floating">
                                             <input type="text" class="form-control" id="floatingInput" placeholder="Masukan nama kategori" aria-describedby="floatingInputHelp" disabled/>
-                                            <label for="floatingInput">Nama Kategori Produk</label>
+                                            <label for="floatingInput">Merek Produk</label>
                                         </div>
-                                    </div>
-                                </div>
-                                <div class="row g-2">
-                                    <div class="col mb-0">
-                                        <label for="formFile" class="form-label">Upload Foto Kategori</label>
-                                        <input class="form-control" type="file" id="formFile" disabled/>
                                     </div>
                                 </div>
                             </div>
@@ -184,7 +172,7 @@
                     <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel3">Hapus Kategori Produk</h5>
+                            <h5 class="modal-title" id="exampleModalLabel3">Hapus Merek Produk</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" ></button>
                             </div>
                             <div class="modal-body">
