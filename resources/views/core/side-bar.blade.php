@@ -152,16 +152,16 @@
         </a>
       </li>
       <!-- Supplier -->
-      <li class="menu-item">
-        <a href="cards-basic.html" class="menu-link">
+      <li class="menu-item @yield('supplier')">
+        <a href="{{ url('master-data/supplier') }}" class="menu-link">
           <i class="menu-icon tf-icons bx bx-collection"></i>
           <div data-i18n="Basic">Supplier</div>
         </a>
       </li>
 
       <!-- User -->
-      <li class="menu-item">
-        <a href="cards-basic.html" class="menu-link">
+      <li class="menu-item @yield('user')">
+        <a href="{{ url('master-data/user') }}" class="menu-link">
           <i class="menu-icon tf-icons bx bx-collection"></i>
           <div data-i18n="Basic">User</div>
         </a>
