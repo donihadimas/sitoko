@@ -4,6 +4,8 @@ use App\Http\Controllers\ClientMasterDataCategoryProduct;
 use App\Http\Controllers\ClientMasterDataProduct;
 use App\Http\Controllers\ClientMasterDataProductBrand;
 use App\Http\Controllers\ClientMasterDataProductCategory;
+use App\Http\Controllers\ClientMasterDataSupplier;
+use App\Http\Controllers\ClientMasterDataUser;
 use App\Http\Controllers\DashboardControlller;
 use Illuminate\Support\Facades\Route;
 
@@ -26,4 +28,6 @@ Route::prefix('master-data')->group(function () {
     Route::get('/product', [ClientMasterDataProduct::class, 'index']);
     Route::get('/product-category', [ClientMasterDataProductCategory::class, 'index']);
     Route::get('/product-brand', [ClientMasterDataProductBrand::class, 'index']);
+    Route::get('/supplier', [ClientMasterDataSupplier::class, 'index']);
+    Route::get('/user', [ClientMasterDataUser::class, 'index']);
 });
