@@ -145,8 +145,8 @@
         </a>
       </li>
       <!-- Merek -->
-      <li class="menu-item">
-        <a href="cards-basic.html" class="menu-link">
+      <li class="menu-item @yield('product-brand')">
+        <a href="{{ url('master-data/product-brand') }}" class="menu-link">
           <i class="menu-icon tf-icons bx bx-collection"></i>
           <div data-i18n="Basic">Merek Produk</div>
         </a>
